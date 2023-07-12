@@ -1,0 +1,29 @@
+###############################################################################
+# Author: Julia Nelson
+# Date: June 17, 2021
+# Pledge: "I pledge my honor that I have abided by the Stevens Honor System."
+# Description: runtime.txt for mtsieve.c
+################################################################################ 
+
+
+time ./mtsieve -s100 -e200000000 -t1 : 0m4.952s
+time ./mtsieve -s100 -e200000000 -t2 : 0m2.961s
+time ./mtsieve -s100 -e200000000 -t3 : 0m2.242s
+time ./mtsieve -s100 -e200000000 -t4 : 0m2.175s
+time ./mtsieve -s100 -e200000000 -t5 : 0m1.665s
+time ./mtsieve -s100 -e200000000 -t6 : 0m1.629s
+time ./mtsieve -s100 -e200000000 -t7 : 0m1.568s
+time ./mtsieve -s100 -e200000000 -t8 : 0m1.701s
+Error at t9
+
+# What CPU do you have? Use your previous lab cpumodel to answer that question.
+
+	My CPU is Quad-Core Intel Core i7 CPU 2.20GHz
+
+# Does the time scale linearly with the number of threads? 
+# If not, does it continue to improve, plateau, or start to decline? 
+# Explain your findings in just a few sentences.
+ 
+	Time does not scale fully linearly... It improves quickly and then begins to plateau at 
+	t5 to t7 bu at t8 it actually is worse and then by t9 it "does not exceed twice the number
+	of processors"

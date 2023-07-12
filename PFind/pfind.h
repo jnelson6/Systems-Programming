@@ -1,0 +1,36 @@
+/******************************************************************************
+* Author: Julia Nelson
+* Date: June 12, 2021
+* Pledge: "I pledge my honor that I have abided by the Stevens Honor System."
+* Description: Permission Finder in C - hw3
+* 			   (finds files with a specified set of permissions)
+******************************************************************************/
+
+#ifndef PFIND_H //for preventing include many times
+#define PFIND_H
+
+
+/*
+pfind.h
+*/
+
+/*
+validate arguments
+return EXIT_FAILURE
+or EXIT_SUCCESS
+*/
+int validateInput(int argc, char* argv[], int* dirPos, int* permissionPos);
+
+/*
+find files based on the permission
+this function is the recursive function
+that also check the subdirectory
+*/
+void find(const char* dirName, char* permission, int* count);
+
+/*
+check if file has permission
+*/
+int hasPermission(const char* filename, char* permission);
+
+#endif
